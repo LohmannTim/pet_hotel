@@ -5,11 +5,77 @@
     <script src="vendors/angular.mn.js"></script>
     <script src="vendors/client.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
-    <title>Document</title>
+    <title>Sparklepony Magic Pet Hotel</title>
 </head>
+<header><h1>Sparklepony Magic Pet Hotel</h1></header>
 
 <body ng-app="PetApp" ng-controller="PetController">
-
+<section>
+    <h2>Owner Registration</h2>
+    <form>
+        <label for="firstNameInput">First Name:</label>
+        <input id="firstNameInput">
+        <label for="lastNameInput">Last Name:</label>
+        <input id="lastNameInput">
+        <button id="registerButton">Register</button>
+    </form>
+</section>
+<section>
+    <h2>Pets</h2>
+    <form>
+        <label for="ownerNameList">Owner Name:</label>
+        <select id="ownerNameList">
+            <!--owner names will go here, replacing these static values-->
+            <option value="bobby">Bobby Cordray</option> 
+            <option value="tim">Tim Lohmann</option> 
+            <option value="jen">Jen Show</option> 
+            <option value="Adam">Adam Biessener</option> 
+        </select>
+        <label for="petNameInput">Pet Name:</label>
+        <input id="petNameInput">
+        <label for="breedInput">Breed:</label>
+        <input id="breedInput">
+        <label for="colorInput">Color:</label>
+        <input id="colorInput">
+    </form>
+</section>
+<section>
+    <!--All of the <tr> and <td> elements in this table will be replaced with dynamic content. This is just to show what it will look like.-->
+    <table>
+        <thead>
+            <th>Owner</th>
+            <th>Pet</th>
+            <th>Breed</th>
+            <th>Color</th>
+            <th>Update</th>
+            <th>Delete</th>
+            <th>Check In/Out</th>
+        </thead>
+        <!--placeholders from here own down to the end of the table-->
+        <tr class="petRow">
+            <td class="petRowOwner">Bobby Cordray</td>
+            <td class="petRowName">Gargamel</td>
+            <td class="petRowBreed">Warlock</td>
+            <td class="petRowColor">Purple</td>
+            <td class="petRowUpdate"><button class="petRowUpdateButton">Go</button></td>
+            <td class="petRowDelete"><button class="petRowDeleteButton">Go</button></td>
+            <td class="petRowCheckInOut"><button class="petRowCheckInOutButton">In</button></td>
+        </tr>
+        <tr class="petRow">
+            <td class="petRowOwner">Jen Show</td>
+            <td class="petRowName">Skeletor</td>
+            <td class="petRowBreed">Skelewitch</td>
+            <td class="petRowColor">Yellow</td>
+            <td class="petRowUpdate"><button class="petRowUpdateButton">Go</button></td>
+            <td class="petRowDelete"><button class="petRowDeleteButton">Go</button></td>
+            <td class="petRowCheckInOut"><button class="petRowCheckInOutButton">In</button></td>
+        </tr>
+        <!-- /placeholder -->
+    </table>
+</section>
 </body>
+<footer>
+<div>Created by Sparklepony Enterprises</div>
+</footer>
 
 </html>
