@@ -6,7 +6,7 @@ app.controller('PetHotelController', ['$http', function($http){
     console.log('PetHotel controller loaded')
     var self = this;
 
-
+    self.newPet ={};
 
     self.addPet = function() {
         console.log('add button clicked');
@@ -18,7 +18,9 @@ app.controller('PetHotelController', ['$http', function($http){
           data: self.newPet
         }).then(function(response){
           console.log(response);
+          self.newPet ={};
           //self.getPets();
+
         })
       }
 
