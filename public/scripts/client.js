@@ -7,4 +7,20 @@ app.controller('PetHotelController', ['$http', function($http){
     var self = this;
 
 
+
+    self.addPet = function() {
+        console.log('add button clicked');
+        console.log(self.newPet)
+        $http({
+          method: 'POST',
+          url: '/pet',
+          data: self.newPet
+        }).then(function(response){
+          console.log(response);
+          //self.getPets();
+        })
+      }
+
+
+
 }]);
