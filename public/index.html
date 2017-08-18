@@ -58,24 +58,16 @@
                 <th>Check In/Out</th>
             </thead>
             <!--placeholders from here own down to the end of the table-->
-            <tr class="petRow">
-                <td class="petRowOwner">Bobby Cordray</td>
-                <td class="petRowName">Gargamel</td>
-                <td class="petRowBreed">Warlock</td>
-                <td class="petRowColor">Purple</td>
+            <tr ng-repeat="pet in vm.petNames" class="petRow">
+                <td class="petRowOwner">{{pet.firstname}} {{pet.lastname}}</td>
+                <td class="petRowName">{{pet.name}}</td>
+                <td class="petRowBreed">{{pet.breed}}</td>
+                <td class="petRowColor">{{pet.color}}</td>
                 <td class="petRowUpdate"><button class="petRowUpdateButton tableButton">Go</button></td>
                 <td class="petRowDelete "><button class="petRowDeleteButton tableButton">Go</button></td>
                 <td class="petRowCheckInOut"><button class="petRowCheckInOutButton tableButton">In</button></td>
             </tr>
-            <tr class="petRow">
-                <td class="petRowOwner">Jen Show</td>
-                <td class="petRowName">Skeletor</td>
-                <td class="petRowBreed">Skelewitch</td>
-                <td class="petRowColor">Yellow</td>
-                <td class="petRowUpdate"><button class="petRowUpdateButton">Go</button></td>
-                <td class="petRowDelete"><button class="petRowDeleteButton">Go</button></td>
-                <td class="petRowCheckInOut"><button class="petRowCheckInOutButton">In</button></td>
-            </tr>
+          
             <!-- /placeholder -->
         </table>
     </section>
