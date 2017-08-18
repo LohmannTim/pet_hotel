@@ -12,7 +12,7 @@
     <hr>
 </header>
 
-<body ng-app="PetHotelApp" ng-controller="PetHotelController">
+<body ng-app="PetHotelApp" ng-controller="PetHotelController as vm">
     <section>
         <h2>Owner Registration</h2>
         <form>
@@ -27,7 +27,7 @@
         <h2>Pets</h2>
         <form>
             <label for="ownerNameList">Owner Name:</label>
-            <select id="ownerNameList">
+            <select id="ownerNameList" ng-model="vm.newPet.owner">
             <!--owner names will go here, replacing these static values-->
             <option value="bobby">Bobby Cordray</option> 
             <option value="tim">Tim Lohmann</option> 
@@ -35,12 +35,14 @@
             <option value="Adam">Adam Biessener</option> 
         </select>
             <label for="petNameInput">Pet Name:</label>
-            <input id="petNameInput">
+            <input id="petNameInput" ng-model="vm.newPet.name">
             <label for="breedInput">Breed:</label>
-            <input id="breedInput">
+            <input id="breedInput" ng-model="vm.newPet.breed">
             <label for="colorInput">Color:</label>
-            <input id="colorInput">
+            <input id="colorInput" ng-model="vm.newPet.color">
+            <button id="registerPetButton" ng-click="vm.addPet()">Register Pet</button>
         </form>
+        <p>{{vm.newPet}}</p>
     </section>
     <section>
         <!--All of the <tr> and <td> elements in this table will be replaced with dynamic content. This is just to show what it will look like.-->
