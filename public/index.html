@@ -13,33 +13,33 @@
 </header>
 
 <body ng-app="PetHotelApp" ng-controller="PetHotelController">
-    <section>
+    <section id="ownerSection">
         <h2>Owner Registration</h2>
         <form>
-            <label for="firstNameInput">First Name:</label>
-            <input id="firstNameInput">
-            <label for="lastNameInput">Last Name:</label>
-            <input id="lastNameInput">
+            <label for="firstNameInput">First Name:
+            <input id="firstNameInput"></label>
+            <label for="lastNameInput">Last Name:
+            <input id="lastNameInput"></label>
             <button id="registerButton">Register</button>
         </form>
     </section>
-    <section>
-        <h2>Pets</h2>
-        <form>
-            <label for="ownerNameList">Owner Name:</label>
+    <section id="petSection">
+        <h2>Pets Registration</h2>
+        <form id="petForm">
+            <label for="ownerNameList">Owner Name:
             <select id="ownerNameList">
             <!--owner names will go here, replacing these static values-->
             <option value="bobby">Bobby Cordray</option> 
             <option value="tim">Tim Lohmann</option> 
             <option value="jen">Jen Show</option> 
             <option value="Adam">Adam Biessener</option> 
-        </select>
-            <label for="petNameInput">Pet Name:</label>
-            <input id="petNameInput">
-            <label for="breedInput">Breed:</label>
-            <input id="breedInput">
-            <label for="colorInput">Color:</label>
-            <input id="colorInput">
+        </select></label>
+            <label for="petNameInput">Pet Name:
+            <input id="petNameInput"></label>
+            <label for="breedInput">Breed:
+            <input id="breedInput"></label>
+            <label for="colorInput">Color:
+            <input id="colorInput"></label>
         </form>
     </section>
     <section>
