@@ -1,0 +1,108 @@
+html {
+    background-color: #E090E8;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html::before {
+    background: url('../images/sparklepony.png');
+    opacity: 0.4;
+    z-index: 1;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    content:"";
+}
+header, footer {
+    width: 90%;
+    color: black;
+    margin: 5px auto;
+}
+
+footer {
+    text-align: right;
+    
+}
+
+body {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+h2 {
+    padding: 5px;
+    margin: 3px auto;
+    text-align: center;
+    opacity: 1;
+}
+
+form {
+    margin: 10px 5%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-flow: row wrap;
+}
+
+#petForm {
+    height: 50px;
+    
+}
+
+section{
+    background-color: rgba(0,0,0,0.25);
+    width: 70%;
+    max-width: 700px;
+    min-width: 600px;
+    border-radius: 15px;
+    z-index: 2;
+    margin: 10px auto;
+    padding: 15px;
+    
+}
+#ownerSection {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+}
+
+#petSection {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.tableButton {
+    width: 85%;
+}
+
+footer {
+    font-style: italic;
+}
+
+table {
+    background-color: rgba(0,0,0,0.2);
+    width: 90%;    
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 10px;
+}
