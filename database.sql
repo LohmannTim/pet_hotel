@@ -1,0 +1,18 @@
+CREATE TABLE Owners (
+  id SERIAL PRIMARY KEY,
+  firstName VARCHAR(80) NOT NULL,
+  lastName VARCHAR(120) NOT NULL
+  );
+
+CREATE TABLE pets (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(80) NOT NULL,
+  breed VARCHAR(120) NOT NULL,
+  color VARCHAR(30)
+);
+
+CREATE TABLE visits (
+  id SERIAL PRIMARY KEY,
+  check_in DATE NOT NULL,
+  check_out DATE NOT NULL
+);
