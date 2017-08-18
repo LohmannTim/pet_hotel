@@ -23,5 +23,25 @@ self.getPets();
 
 
 
-}]);
 
+    self.newPet ={};
+
+    self.addPet = function() {
+        console.log('add button clicked');
+        console.log('self.newPet', self.newPet)
+        console.log('name', self.newPet.name);
+        $http({
+          method: 'POST',
+          url: '/pet',
+          data: self.newPet
+        }).then(function(response){
+          console.log(response);
+          self.newPet ={};
+          //self.getPets();
+
+        })
+      }
+
+
+
+}]);
