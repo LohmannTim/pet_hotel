@@ -12,8 +12,8 @@
     <hr>
 </header>
 
-<body ng-app="PetHotelApp" ng-controller="PetHotelController">
-    <section id="ownerSection">
+<body ng-app="PetHotelApp" ng-controller="PetHotelController as vm">
+    <section>
         <h2>Owner Registration</h2>
         <form>
             <label for="firstNameInput">First Name:
@@ -23,23 +23,25 @@
             <button id="registerButton">Register</button>
         </form>
     </section>
+
     <section id="petSection">
         <h2>Pets Registration</h2>
         <form id="petForm">
             <label for="ownerNameList">Owner Name:
-            <select id="ownerNameList">
+            <select id="ownerNameList" ng-model="vm.newPet.owner">
             <!--owner names will go here, replacing these static values-->
-            <option value="bobby">Bobby Cordray</option> 
-            <option value="tim">Tim Lohmann</option> 
-            <option value="jen">Jen Show</option> 
-            <option value="Adam">Adam Biessener</option> 
-        </select></label>
+                <option value="bobby">Bobby Cordray</option> 
+                <option value="tim">Tim Lohmann</option> 
+                <option value="jen">Jen Show</option> 
+                <option value="Adam">Adam Biessener</option> 
+            </select></label>
             <label for="petNameInput">Pet Name:
-            <input id="petNameInput"></label>
+            <input id="petNameInput" ng-model="vm.newPet.name"></label>
             <label for="breedInput">Breed:
-            <input id="breedInput"></label>
+            <input id="breedInput" ng-model="vm.newPet.breed"></label>
             <label for="colorInput">Color:
-            <input id="colorInput"></label>
+            <input id="colorInput" ng-model="vm.newPet.color"></label>
+            <button id="registerPetButton" ng-click="vm.addPet()">Register Pet</button>
         </form>
     </section>
     <section>
