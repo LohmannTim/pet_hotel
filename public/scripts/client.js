@@ -10,7 +10,8 @@ app.controller('PetHotelController', ['$http', function($http){
 
     self.addPet = function() {
         console.log('add button clicked');
-        console.log(self.newPet)
+        console.log('self.newPet', self.newPet)
+        console.log('name', self.newPet.name);
         $http({
           method: 'POST',
           url: '/pet',

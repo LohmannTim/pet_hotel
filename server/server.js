@@ -6,6 +6,8 @@ var pets = require('./routes/pet.js');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 
 app.use('/pet', pets);
 
