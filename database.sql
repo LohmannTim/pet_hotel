@@ -1,4 +1,4 @@
-CREATE TABLE Owners (
+CREATE TABLE owners (
   id SERIAL PRIMARY KEY,
   firstName VARCHAR(80) NOT NULL,
   lastName VARCHAR(120) NOT NULL
