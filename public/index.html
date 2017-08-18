@@ -21,29 +21,31 @@
             <label for="lastNameInput">Last Name:</label>
             <input id="lastNameInput" ng-model="vm.newOwner.lastName">
             <button id="registerButton" ng-click="vm.postNewOwner()">Register</button>
-            <p>{{vm}}</p>
         </form>
     </section>
-    <section>
-        <h2>Pets</h2>
-        <form>
-            <label for="ownerNameList">Owner Name:</label>
-            <select id="ownerNameList">
+
+    <section id="petSection">
+        <h2>Pets Registration</h2>
+        <form id="petForm">
+            <label for="ownerNameList">Owner Name:
+            <select id="ownerNameList" ng-model="vm.newPet.owner">
             <!--owner names will go here, replacing these static values-->
-            <option value="bobby">Bobby Cordray</option> 
-            <option value="tim">Tim Lohmann</option> 
-            <option value="jen">Jen Show</option> 
-            <option value="Adam">Adam Biessener</option> 
-        </select>
-            <label for="petNameInput">Pet Name:</label>
-            <input id="petNameInput">
-            <label for="breedInput">Breed:</label>
-            <input id="breedInput">
-            <label for="colorInput">Color:</label>
-            <input id="colorInput">
+                <option value="bobby">Bobby Cordray</option> 
+                <option value="tim">Tim Lohmann</option> 
+                <option value="jen">Jen Show</option> 
+                <option value="Adam">Adam Biessener</option> 
+            </select></label>
+            <label for="petNameInput">Pet Name:
+            <input id="petNameInput" ng-model="vm.newPet.name"></label>
+            <label for="breedInput">Breed:
+            <input id="breedInput" ng-model="vm.newPet.breed"></label>
+            <label for="colorInput">Color:
+            <input id="colorInput" ng-model="vm.newPet.color"></label>
+            <button id="registerPetButton" ng-click="vm.addPet()">Register Pet</button>
         </form>
     </section>
     <section>
+        <h2>All Pets</h2>
         <!--All of the <tr> and <td> elements in this table will be replaced with dynamic content. This is just to show what it will look like.-->
         <table>
             <thead>
@@ -56,24 +58,16 @@
                 <th>Check In/Out</th>
             </thead>
             <!--placeholders from here own down to the end of the table-->
-            <tr class="petRow">
-                <td class="petRowOwner">Bobby Cordray</td>
-                <td class="petRowName">Gargamel</td>
-                <td class="petRowBreed">Warlock</td>
-                <td class="petRowColor">Purple</td>
-                <td class="petRowUpdate"><button class="petRowUpdateButton">Go</button></td>
-                <td class="petRowDelete"><button class="petRowDeleteButton">Go</button></td>
-                <td class="petRowCheckInOut"><button class="petRowCheckInOutButton">In</button></td>
+            <tr ng-repeat="pet in vm.petNames" class="petRow">
+                <td class="petRowOwner">{{pet.firstname}} {{pet.lastname}}</td>
+                <td class="petRowName">{{pet.name}}</td>
+                <td class="petRowBreed">{{pet.breed}}</td>
+                <td class="petRowColor">{{pet.color}}</td>
+                <td class="petRowUpdate"><button class="petRowUpdateButton tableButton">Go</button></td>
+                <td class="petRowDelete "><button class="petRowDeleteButton tableButton">Go</button></td>
+                <td class="petRowCheckInOut"><button class="petRowCheckInOutButton tableButton">In</button></td>
             </tr>
-            <tr class="petRow">
-                <td class="petRowOwner">Jen Show</td>
-                <td class="petRowName">Skeletor</td>
-                <td class="petRowBreed">Skelewitch</td>
-                <td class="petRowColor">Yellow</td>
-                <td class="petRowUpdate"><button class="petRowUpdateButton">Go</button></td>
-                <td class="petRowDelete"><button class="petRowDeleteButton">Go</button></td>
-                <td class="petRowCheckInOut"><button class="petRowCheckInOutButton">In</button></td>
-            </tr>
+
             <!-- /placeholder -->
         </table>
     </section>
